@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="timer">TIMER : 0 s</div>
+
+    <div class="game-container">
+        <div id="enigma-1" class="enigmas">
+            <h1>The Mirror</h1>
+            <p>You have to input the valid word !</p>
+            <p>Reversed Text : tpircsavaJ</p>
+            <input type="text" placeholder="Tape your answer here..." id="mirror-input">
+            <button class="btn-enigma1">Validation</button>
+            <h3 class="enigma-1-succes">Congratulations, You found it!</h3>
+            <h3 class="enigma-1-error">Wrong, try Again!</h3>
+            <p id="help-1"></p>
+            <button class="nextBtn" onclick="showEnigma(2)" style="display: none;">Go Next!</button>
+        </div>
+
+        <div id="enigma-2" class="enigmas">
+            <h1>Find Me If You Can</h1>
+            <img src="https://www.htmlgoodies.com/wp-content/uploads/2021/05/Javascript-Time-Zone-Date-696x753.png"
+                alt="Énigme" class="enigma-image" id="enigmaImage">
+            <p>This is My Favorite Language</p>
+            <p>Click on Me to learn about</p>
+            <div class="success-message">Congratulation, You find it! 🎉</div>
+            <div class="click-counter"></div>
+            <p id="help-2"></p>
+            <button class="nextBtn2 nextBtn" onclick="showEnigma(3)" style="display: none;">Go Next!</button>
+        </div>
+
+        <div id="enigma-3" class="enigmas">
+            <h1>Color Code</h1>
+            <p>You have to find the correct sequences</p>
+            <div class="color-buttons">
+                <button class="redBtn button" style="background-color: red;">RED</button>
+                <button class="blueBtn button" style="background-color: blue;">BLUE</button>
+                <button class="greenBtn button" style="background-color: green;">GREEN</button>
+            </div>
+            <p class="message"></p>
+            <p id="help-3"></p>
+            <button class="nextBtn" onclick="showEnigma(4)" style="display: none;">Go Next!</button>
+        </div>
+
+        <div id="enigma-4" class="enigmas">
+            <h1>Crack the Code</h1>
+            <p>You have to find the <span style="color: red;">code</span> Access</p>
+            <div class="inputs">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            <div class="message"></div>
+            <button class="submit">Submit</button>
+            <p id="help-4"></p>
+            <a href="../score/score.html" onclick="saveGameScore()">
+                <button class="nextBtn" style="display: none;" id="lastButton">Go Next!</button>
+            </a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
